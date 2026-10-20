@@ -1,6 +1,14 @@
 {
   "processes": [
     {
+      "name": "Hundesteuer",
+      "description": "Ein beispielhafter Hundesteuer-Antragsprozess, bei dem Formulardaten online erfasst werden, ein Erfolgsbescheid als PDF erstellt und automatisch per E-Mail an die Antragsteller:in zugestellt wird.",
+      "vendor": "Aivot",
+      "path": "./processes/hundesteuer-form-5.0.0-beta-147-125.json",
+      "appVersion": "5.0.0-beta-147",
+      "appBuildNumber": "125"
+    },
+    {
       "name": "OZG-Antragsprozess",
       "description": "Ein beispielhafter OZG-Antragsprozess, bei dem Formulardaten online erfasst werden, ein Erfolgsbescheid als PDF erstellt und automatisch per E-Mail an die Antragsteller:in zugestellt wird.",
       "vendor": "Aivot",
@@ -9,12 +17,28 @@
       "appBuildNumber": "648"
     },
     {
+      "name": "OZG-Antragsprozess",
+      "description": "Ein beispielhafter OZG-Antragsprozess, bei dem Formulardaten online erfasst werden, ein Erfolgsbescheid als PDF erstellt und automatisch per E-Mail an die Antragsteller:in zugestellt wird.",
+      "vendor": "Aivot",
+      "path": "./processes/ozg-form-5.0.0-beta-147-125.json",
+      "appVersion": "5.0.0-beta-147",
+      "appBuildNumber": "125"
+    },
+    {
       "name": "Webhook-gesteuerter Prozess",
       "description": "Ein Webhook-gesteuerter Prozess, der Daten entgegennimmt und verarbeitet, wenn ein bestimmtes Ereignis eintritt. Er ermöglicht die Integration von Drittanbieteranwendungen und die Automatisierung von Arbeitsabläufen durch das Senden von HTTP-Anfragen an Gover.",
       "vendor": "Aivot",
       "path": "./processes/webhook-5.0.0-alpha-71-648.json",
       "appVersion": "5.0.0-alpha-71",
       "appBuildNumber": "648"
+    },
+    {
+      "name": "Webhook-gesteuerter Prozess",
+      "description": "Ein Webhook-gesteuerter Prozess, der Daten entgegennimmt und verarbeitet, wenn ein bestimmtes Ereignis eintritt. Er ermöglicht die Integration von Drittanbieteranwendungen und die Automatisierung von Arbeitsabläufen durch das Senden von HTTP-Anfragen an Gover.",
+      "vendor": "Aivot",
+      "path": "./processes/webhook-5.0.0-beta-147-125.json",
+      "appVersion": "5.0.0-beta-147",
+      "appBuildNumber": "125"
     }
   ],
   "nodes": []

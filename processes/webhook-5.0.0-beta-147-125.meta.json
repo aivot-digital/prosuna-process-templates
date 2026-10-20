@@ -1,0 +1,4 @@
+{
+  "name": "Webhook-gesteuerter Prozess",
+  "description": "Ein Webhook-gesteuerter Prozess, der Daten entgegennimmt und verarbeitet, wenn ein bestimmtes Ereignis eintritt. Er ermöglicht die Integration von Drittanbieteranwendungen und die Automatisierung von Arbeitsabläufen durch das Senden von HTTP-Anfragen an Gover."
+}
