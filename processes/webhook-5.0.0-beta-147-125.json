@@ -1,126 +1,48 @@
 {
   "appVersion": "5.0.0-beta-147",
   "appBuildNumber": "125",
-  "exportTimestamp": "2026-10-20T06:32:45.399Z",
+  "exportTimestamp": "2026-10-20T09:40:29.534308592+02:00",
   "createdByVendor": "Aivot",
   "process": {
-    "id": 0,
-    "internalTitle": "Webhook-gesteuerter Prozess",
-    "departmentId": null,
     "accessKey": null,
-    "slug": "webhook-prozess",
-    "versionCount": null,
+    "created": "2026-10-20T09:39:59.759178+02:00",
+    "departmentId": null,
     "draftedVersion": null,
+    "id": 6,
+    "internalTitle": null,
     "publishedVersion": null,
-    "created": "2026-04-13T15:14:02.356Z",
-    "updated": "2026-04-13T15:14:02.356Z"
+    "slug": "webhook-prozess",
+    "updated": "2026-10-20T09:40:29.534997479+02:00",
+    "versionCount": null
   },
   "version": {
-    "processId": 0,
-    "processVersion": 0,
-    "status": "Drafted",
-    "publicTitle": "Neuer Prozess",
-    "caseNumberType": "CROCKFORD_BASE32",
-    "caseNumberTemplate": null,
-    "retentionTimeValue": null,
-    "retentionTimeUnit": null,
-    "instanceDeadlineDays": null,
-    "themeId": null,
-    "legalSupportDepartmentId": null,
-    "technicalSupportDepartmentId": null,
-    "imprintDepartmentId": null,
-    "privacyDepartmentId": null,
     "accessibilityDepartmentId": null,
-    "processSpecificPrivacyStatement": null,
-    "processSpecificAccessibilityStatement": null,
+    "caseNumberTemplate": null,
+    "caseNumberType": "CROCKFORD_BASE32",
+    "created": "2026-10-20T09:39:59.762545+02:00",
+    "imprintDepartmentId": null,
+    "instanceDeadlineDays": null,
+    "legalSupportDepartmentId": null,
     "notes": null,
-    "created": "2026-04-13T15:14:02.356Z",
-    "updated": "2026-04-13T15:14:02.356Z",
+    "privacyDepartmentId": null,
+    "processId": 6,
+    "processSpecificAccessibilityStatement": null,
+    "processSpecificPrivacyStatement": null,
+    "processVersion": 1,
+    "publicTitle": "Neuer Prozess",
     "published": null,
-    "revoked": null
+    "retentionTimeUnit": null,
+    "retentionTimeValue": null,
+    "revoked": null,
+    "status": "Drafted",
+    "technicalSupportDepartmentId": null,
+    "themeId": null,
+    "updated": "2026-10-20T09:40:13.72459+02:00"
   },
   "nodes": [
     {
-      "id": 81,
-      "processId": 8,
-      "processVersion": 1,
-      "name": "Zustellung Bescheid",
-      "description": "Zustellung des Erfolgsbescheides an die Antragsteller:in.",
-      "dataKey": "bj5vg",
-      "processNodeDefinitionKey": "de.aivot.core.mail",
-      "processNodeDefinitionVersion": 1,
-      "configuration": {
-        "automatic_content": {
-          "type": "Literal",
-          "value": "Sehr geehrte(r) **{{ $.Person.Vorname }} {{ $.Person.Nachname }}**,\n\n\n\nim Anhang zu dieser E-Mail erhalten Sie Ihren offiziellen **Erfolgsbescheid** des Amts Bad Musterstadt im PDF-Format.\n\n**Kurzinfo zum Vorgang:**\n\n* **Status:** Erfolgreich abgeschlossen\n* **Empfänger:** {{ $.Person.Vorname }} {{ $.Person.Nachname }}\n* **Kontakt für Rückfragen:** [mail@aivot.de](mailto:mail@aivot.de)\n\nWir freuen uns, Ihnen mitteilen zu können, dass Ihr Anliegen positiv beschieden wurde. Bitte bewahren Sie das angehängte Dokument für Ihre Unterlagen auf.\n\n\n\nBei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.\n\n\n\nMit freundlichen Grüßen\n\n**Ihr Team vom Amt Bad Musterstadt**"
-        },
-        "automatic_subject": {
-          "type": "Literal",
-          "value": "Ihr Bescheid vom Amt Bad Musterstadt – Referenz: {{ $.Person.Nachname }}"
-        },
-        "attachment_file_names": {
-          "type": "Literal",
-          "value": [
-            "S23xr"
-          ]
-        },
-        "execution_type": {
-          "type": "Literal",
-          "value": "automatic"
-        },
-        "to": {
-          "type": "Literal",
-          "value": "{{ $.Kontakt.EMailAdresse }}"
-        }
-      },
-      "outputMappings": {},
-      "deadlines": {},
-      "requirements": null,
-      "notes": null,
-      "savedWithErrors": false,
-      "created": null,
-      "displayName": "Zustellung Bescheid",
-      "updated": null
-    },
-    {
-      "id": 85,
-      "processId": 8,
-      "processVersion": 1,
-      "name": "Antragsteller:in informieren",
-      "description": "Informiert die Antragsteller:in über die Ablehnung aufgrund von ungültigen Angaben.",
-      "dataKey": "x3uQt",
-      "processNodeDefinitionKey": "de.aivot.core.mail",
-      "processNodeDefinitionVersion": 1,
-      "configuration": {
-        "automatic_content": {
-          "type": "Literal",
-          "value": "Sehr geehrte Antragsteller:in,\n\nleider konnte Ihr Antrag nicht verarbeitet werden, da Ihre Antragsdaten unvollständig waren.\nBitte kontaktieren Sie uns für das weitere Vorgehen.\n\n\n\nMit freundlichen Grüßen\n\nAmt Bad Musterstadt"
-        },
-        "automatic_subject": {
-          "type": "Literal",
-          "value": "Unvollständige Daten"
-        },
-        "execution_type": {
-          "type": "Literal",
-          "value": "automatic"
-        },
-        "to": {
-          "type": "Literal",
-          "value": "{{ $.Kontakt.EMailAdresse }}"
-        }
-      },
-      "outputMappings": {},
-      "deadlines": {},
-      "requirements": null,
-      "notes": null,
-      "savedWithErrors": false,
-      "created": null,
-      "displayName": "Antragsteller:in informieren",
-      "updated": null
-    },
-    {
-      "id": 80,
-      "processId": 8,
+      "id": 32,
+      "processId": 6,
       "processVersion": 1,
       "name": "Bescheiderstellung",
       "description": "Erstellt den Erfolgsbescheid für die Antragsteller:in.",
@@ -151,8 +73,8 @@
       "updated": null
     },
     {
-      "id": 84,
-      "processId": 8,
+      "id": 33,
+      "processId": 6,
       "processVersion": 1,
       "name": "Ungültige Anfrage",
       "description": "Beendet den Vorgang aufgrund von ungültigen Daten.",
@@ -179,8 +101,8 @@
       "updated": null
     },
     {
-      "id": 83,
-      "processId": 8,
+      "id": 34,
+      "processId": 6,
       "processVersion": 1,
       "name": "Prüfung E-Mail-Kontakt",
       "description": "Prüft, ob eine E-Mail-Adresse hinterlegt ist, um eine Ablehnung zu senden.",
@@ -214,8 +136,8 @@
       "updated": null
     },
     {
-      "id": 82,
-      "processId": 8,
+      "id": 35,
+      "processId": 6,
       "processVersion": 1,
       "name": "Abschluss",
       "description": "Abschluss des Vorgangs nach erfolgreicher Bescheidzustellung.",
@@ -242,8 +164,8 @@
       "updated": null
     },
     {
-      "id": 78,
-      "processId": 8,
+      "id": 36,
+      "processId": 6,
       "processVersion": 1,
       "name": "Dateneingang (JSON)",
       "description": "Empfangen von JSON-Daten.",
@@ -251,10 +173,6 @@
       "processNodeDefinitionKey": "de.aivot.core.webhook",
       "processNodeDefinitionVersion": 1,
       "configuration": {
-        "copy_to_process_data": {
-          "type": "Literal",
-          "value": true
-        },
         "request_method": {
           "type": "Literal",
           "value": "POST"
@@ -274,6 +192,10 @@
         "request_body_type": {
           "type": "Literal",
           "value": "json"
+        },
+        "copy_to_process_data": {
+          "type": "Literal",
+          "value": true
         }
       },
       "outputMappings": {},
@@ -286,8 +208,8 @@
       "updated": null
     },
     {
-      "id": 79,
-      "processId": 8,
+      "id": 37,
+      "processId": 6,
       "processVersion": 1,
       "name": "Vollständigkeitsprüfung",
       "description": "Prüfung der Daten auf Vollständigkeit.",
@@ -348,71 +270,149 @@
       "created": null,
       "displayName": "Vollständigkeitsprüfung",
       "updated": null
+    },
+    {
+      "id": 31,
+      "processId": 6,
+      "processVersion": 1,
+      "name": "Antragsteller:in informieren",
+      "description": "Informiert die Antragsteller:in über die Ablehnung aufgrund von ungültigen Angaben.",
+      "dataKey": "x3uQt",
+      "processNodeDefinitionKey": "de.aivot.core.mail",
+      "processNodeDefinitionVersion": 1,
+      "configuration": {
+        "automatic_content": {
+          "type": "Literal",
+          "value": "Sehr geehrte Antragsteller:in,\n\nleider konnte Ihr Antrag nicht verarbeitet werden, da Ihre Antragsdaten unvollständig waren.\nBitte kontaktieren Sie uns für das weitere Vorgehen.\n\nMit freundlichen Grüßen\n\nAmt Bad Musterstadt"
+        },
+        "automatic_subject": {
+          "type": "Literal",
+          "value": "Unvollständige Daten"
+        },
+        "execution_type": {
+          "type": "Literal",
+          "value": "automatic"
+        },
+        "to": {
+          "type": "Literal",
+          "value": "{{ $.Kontakt.EMailAdresse }}"
+        }
+      },
+      "outputMappings": {},
+      "deadlines": {},
+      "requirements": null,
+      "notes": null,
+      "savedWithErrors": false,
+      "created": null,
+      "displayName": "Antragsteller:in informieren",
+      "updated": null
+    },
+    {
+      "id": 30,
+      "processId": 6,
+      "processVersion": 1,
+      "name": "Zustellung Bescheid",
+      "description": "Zustellung des Erfolgsbescheides an die Antragsteller:in.",
+      "dataKey": "bj5vg",
+      "processNodeDefinitionKey": "de.aivot.core.mail",
+      "processNodeDefinitionVersion": 1,
+      "configuration": {
+        "automatic_content": {
+          "type": "Literal",
+          "value": "Sehr geehrte(r) **{{ $.Person.Vorname }} {{ $.Person.Nachname }}**,\n\nim Anhang zu dieser E-Mail erhalten Sie Ihren offiziellen **Erfolgsbescheid** des Amts Bad Musterstadt im PDF-Format.\n\n**Kurzinfo zum Vorgang:**\n\n* **Status:** Erfolgreich abgeschlossen\n* **Empfänger:** {{ $.Person.Vorname }} {{ $.Person.Nachname }}\n* **Kontakt für Rückfragen:** [mail@aivot.de](mailto:mail@aivot.de)\n\nWir freuen uns, Ihnen mitteilen zu können, dass Ihr Anliegen positiv beschieden wurde. Bitte bewahren Sie das angehängte Dokument für Ihre Unterlagen auf.\n\nBei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.\n\nMit freundlichen Grüßen\n\n**Ihr Team vom Amt Bad Musterstadt**"
+        },
+        "automatic_subject": {
+          "type": "Literal",
+          "value": "Ihr Bescheid vom Amt Bad Musterstadt – Referenz: {{ $.Person.Nachname }}"
+        },
+        "attachment_file_names": {
+          "type": "Literal",
+          "value": [
+            "S23xr"
+          ]
+        },
+        "execution_type": {
+          "type": "Literal",
+          "value": "automatic"
+        },
+        "to": {
+          "type": "Literal",
+          "value": "{{ $.Kontakt.EMailAdresse }}"
+        }
+      },
+      "outputMappings": {},
+      "deadlines": {},
+      "requirements": null,
+      "notes": null,
+      "savedWithErrors": false,
+      "created": null,
+      "displayName": "Zustellung Bescheid",
+      "updated": null
     }
   ],
   "edges": [
     {
-      "id": 26,
-      "processId": 8,
+      "id": 32,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 78,
-      "toNodeId": 79,
+      "fromNodeId": 36,
+      "toNodeId": 37,
       "viaPort": "input"
     },
     {
-      "id": 27,
-      "processId": 8,
+      "id": 33,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 79,
-      "toNodeId": 80,
+      "fromNodeId": 37,
+      "toNodeId": 32,
       "viaPort": "valid"
     },
     {
-      "id": 28,
-      "processId": 8,
+      "id": 34,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 80,
-      "toNodeId": 81,
+      "fromNodeId": 32,
+      "toNodeId": 30,
       "viaPort": "output"
     },
     {
-      "id": 29,
-      "processId": 8,
+      "id": 35,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 81,
-      "toNodeId": 82,
+      "fromNodeId": 30,
+      "toNodeId": 35,
       "viaPort": "output"
     },
     {
-      "id": 30,
-      "processId": 8,
+      "id": 36,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 79,
-      "toNodeId": 83,
+      "fromNodeId": 37,
+      "toNodeId": 34,
       "viaPort": "invalid"
     },
     {
-      "id": 31,
-      "processId": 8,
+      "id": 37,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 83,
-      "toNodeId": 84,
+      "fromNodeId": 34,
+      "toNodeId": 33,
       "viaPort": "false"
     },
     {
-      "id": 32,
-      "processId": 8,
+      "id": 38,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 83,
-      "toNodeId": 85,
+      "fromNodeId": 34,
+      "toNodeId": 31,
       "viaPort": "true"
     },
     {
-      "id": 34,
-      "processId": 8,
+      "id": 39,
+      "processId": 6,
       "processVersion": 1,
-      "fromNodeId": 85,
-      "toNodeId": 84,
+      "fromNodeId": 31,
+      "toNodeId": 33,
       "viaPort": "output"
     }
   ]
