@@ -126,7 +126,7 @@
             "notEmpty": true,
             "operands": [
               {
-                "path": "Kontakt.EmailAdresse",
+                "path": "Kontakt.EMailAdresse",
                 "type": "NoCodeProcessDataReference"
               }
             ],
