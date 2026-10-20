@@ -1,0 +1,4 @@
+{
+  "name": "Hundesteuer",
+  "description": "Ein beispielhafter Hundesteuer-Antragsprozess, bei dem Formulardaten online erfasst werden, ein Erfolgsbescheid als PDF erstellt und automatisch per E-Mail an die Antragsteller:in zugestellt wird."
+}
